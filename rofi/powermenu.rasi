@@ -1,0 +1,77 @@
+configuration {
+    show-icons: false;
+    kb-cancel: "";
+    kb-accept-entry: "";
+}
+
+@theme "gruvbox"
+
+* {
+    font:                        "Hack Nerd Font 25";
+    background:                  @bg-col;
+    foreground:                  @input-bg;
+    selected:                    @selected-elem-col;
+}
+
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width: 720px;
+    height: 400px;
+    border:                      2px solid;
+    border-radius:               30px;
+    border-color:                @selected;
+    cursor:                      "default";
+    background-color:            @background;
+}
+
+mainbox {
+    enabled:                     true;
+    spacing:                     20px;
+    margin:                      0px;
+    padding:                     30px;
+    background-color:            transparent;
+    orientation:                 horizontal;
+    children:                    [ "imagebox", "listview" ];
+}
+
+imagebox {
+    border:                      2px solid;
+    border-radius:               100%;
+    border-color:                @selected;
+    background-color:            transparent;
+    background-image:            url("~/.config/hypr/wallpapers/test.jpg", height);
+}
+
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       6;
+    cycle:                       true;
+    scrollbar:                   false;
+    layout:                      vertical;    
+    spacing:                     5px;
+    background-color:            transparent;
+    cursor:                      "default";
+}
+
+element {
+    enabled:                     true;
+    padding:                     11px;
+    border:                      0px solid;
+    border-radius:               100%;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      default;
+}
+
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}

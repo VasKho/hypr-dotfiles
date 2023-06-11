@@ -1,0 +1,56 @@
+configuration {
+    show-icons: false;
+    kb-cancel: "";
+    kb-accept-entry: "";
+}
+
+@theme "gruvbox"
+
+* {
+    font: "Hack Nerd Font 14";
+    background: @bg-col;
+    foreground: @input-bg;
+    selected: @selected-elem-col;
+}
+
+window {
+    location: north;
+    anchor: north;
+    fullscreen: false;
+    width: 730px;
+    y-offset: 32px;
+    border: 1px solid;
+    border-radius: 15px;
+    border-color: @selected;
+    background-color: @background;
+}
+
+mainbox {
+    background-color: transparent;
+    orientation: horizontal;
+    children: [ "listview" ];
+}
+
+listview {
+    enabled: true;
+    columns: 1;
+    lines: 1;
+    scrollbar: false;
+    background-color: transparent;
+    cursor: default;
+}
+
+element {
+    background-color: transparent;
+    text-color: @foreground;
+    padding: 2px 0px 2px -7px;
+    cursor: default;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    cursor: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+}

@@ -1,0 +1,102 @@
+configuration{
+    modi: "drun";
+    font: "Hack Nerd Font 14";
+    show-icons: true;
+    drun-display-format: "{icon} {name}";
+    terminal: "foot";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: " Search apps";
+}
+
+@theme "gruvbox"
+
+window {
+    height: 500px;
+    width: 1000px;
+    border: 3px solid;
+    border-radius: 30px;
+    background-color: @bg-col;
+    border-color: @border-col;
+}
+
+element-icon, element-text, mode-switcher {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+inputbar {
+    children: [prompt,entry];
+    background-color: @bg-col;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+prompt {
+    background-color: @prompt-col;
+    padding: 6px;
+    text-color: @bg-col;
+    border-radius: 10px;
+    margin: 20px 0px 0px 20px;
+}
+
+entry {
+    padding: 6px 10px 6px 10px;
+    margin: 20px 20px 0px 0px;
+    border-radius: 10px;
+    text-color: @text-col;
+    background-color: @input-bg;
+}
+
+mainbox {
+    background-color: @bg-col;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+}
+
+listview {
+    border: 0px 0px 0px 0px;
+    padding: 6px 0px 0px 0px;
+    margin: 10px 20px 0px 20px;
+    background-color: @bg-col;
+    columns: 2;
+}
+
+element {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: @elem-col;
+    text-color: @text-col;
+}
+
+element-icon {
+    size: 25px;
+}
+
+element selected {
+    border-radius: 10px;
+    background-color:  @selected-elem-col ;
+    text-color: @select-col;
+}
+
+mode-switcher {
+    spacing: 0;
+  }
+
+button {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: @bg-col;
+    text-color: @text-col;
+    vertical-align: 0.5; 
+    horizontal-align: 0.5;
+}
+
+button selected {
+  background-color: @bg-col-light;
+  text-color: @prompt-col;
+}
